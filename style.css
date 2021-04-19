@@ -1,0 +1,76 @@
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 1.1rem;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+#navbar {
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(170deg, white, rgba(204, 241, 255, 0.5));
+}
+
+body {
+  background-image: url("https://images.watercolormisfit.com/wp-content/uploads/2019/11/16184909/ABSTRACT-WATERCOLOR2-1536x864.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+#container {
+  background-color: rgba(255, 255, 255, 0.9);
+  max-width: 1000px;
+  min-height: 100vh;
+}
+
+#info img {
+  max-width: 90%;
+  width: 500px;
+  border: 10px solid white;
+  margin: 1rem auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.section-divider {
+  width: 90%;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  margin: 2rem auto 0 auto;
+}
+
+.video-container {
+  max-width: 500px;
+}
+
+.pricing-option {
+  background: radial-gradient(farthest-corner at 50% 55%, rgba(174, 233, 255, 0.616), rgba(84, 201, 255, 0.568));
+  max-width: 250px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  height: 100%;
+}
+.pricing-option .price {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+.pricing-option img {
+  width: 80%;
+  margin: 1rem auto;
+  max-height: 80px;
+  object-fit: cover;
+}
+
+#footer {
+  font-size: 0.8rem;
+  color: rgba(0, 0, 0, 0.8);
+  text-align: center;
+}
+
+.bg-gray {
+  background-color: gray;
+}
+
+/*# sourceMappingURL=style.css.map */
