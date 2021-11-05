@@ -8,23 +8,23 @@ var Col = ReactBootstrap.Col;
 var Button = ReactBootstrap.Button;
 var DATA = {
   pricing: [{
-    title: "One large paint",
+    title: "Large paint",
     description: "We get you a big 900mm x 600mm delievered to you ASAP!",
     price: "USD$150",
     id: "pricing-1",
-    image: "https://imgs.michaels.com/MAM/assets/1/3C806BFAE43F48829D51D9995CDC917A/img/51541773345442A99982BA9A939ECD3F/10122060_4.jpg?fit=inside|540:540"
+    image: "./public/medium.jpg"
   }, {
-    title: "One medium size paint",
+    title: "Medium paint",
     description: "We get you a 600mm x 400mm delievered to you ASAP!",
     price: "USD$100",
     id: "pricing-2",
-    image: "https://cdn.shopify.com/s/files/1/1143/5428/products/4_1e04ee7c-e84e-4789-86fc-d9cdb6f4a32c_800x.jpg?v=1567983503"
+    image: "./public/large.jpg"
   }, {
-    title: "One large & one medium size paint",
+    title: "Large & medium paint",
     description: "We get you a big 900mm x 600mm and a 600mm x 400mm delievered to you ASAP!",
     price: "USD$225",
     id: "pricing-3",
-    image: "https://media1.popsugar-assets.com/files/thumbor/B_3oBlFkQVPHy_9ynKAuT8FMJPk/fit-in/1024x1024/filters:format_auto-!!-:strip_icc-!!-/2020/07/15/928/n/1922441/68bc60045f0f7245968d19.27703092_/i/watercolor-painting-tips-beginners.jpg"
+    image: "./public/both.jpg"
   }]
 };
 
@@ -38,7 +38,7 @@ var Navibar = function Navibar() {
     src: "https://www.artnews.com/wp-content/uploads/2020/05/shutterstock_83717239-1.jpg",
     height: "25",
     className: "mr-1"
-  }), "Watercolor paintings"), /*#__PURE__*/React.createElement(Navbar.Toggle, null), /*#__PURE__*/React.createElement(Navbar.Collapse, null, /*#__PURE__*/React.createElement(Nav, {
+  }), "Watercolor"), /*#__PURE__*/React.createElement(Navbar.Toggle, null), /*#__PURE__*/React.createElement(Navbar.Collapse, null, /*#__PURE__*/React.createElement(Nav, {
     className: "ml-auto"
   }, /*#__PURE__*/React.createElement(Nav.Link, {
     href: "#info"
@@ -67,7 +67,8 @@ var Info = function Info() {
     className: "m-0 mt-2 text-justify"
   }, "We have the biggest collection of watercolor in the country. Out team work without stop to come out with ideas for every taste, to ensure we satisfy your needs for any space and any atmosphere you are trying to create")), /*#__PURE__*/React.createElement("img", {
     className: "mt-5",
-    src: "https://watercolorpainting.com/staging/wp-content/uploads/2019/04/easy-watercolor-techniques-painting-japanese-flowers-within-5-minutes_FEATURED-IMAGE.png"
+    src: "./public/home.png",
+    alt: "Watercolor painting of a cherry tree"
   }), /*#__PURE__*/React.createElement("div", {
     className: "section-divider"
   }));
@@ -115,22 +116,22 @@ var PricingOption = function PricingOption(_ref) {
   };
 
   return /*#__PURE__*/React.createElement(Col, {
-    sm: 6,
-    md: 4,
+    md: 6,
+    lg: 4,
     className: "py-3 px-3 mt-4"
   }, /*#__PURE__*/React.createElement("div", {
-    className: "pricing-option p-4 mx-auto d-flex flex-column"
+    className: "pricing-option mx-auto d-flex flex-column pb-4"
   }, /*#__PURE__*/React.createElement("h4", {
-    className: "text-center mb-3 d-flex align-items-center justify-content-center py-3 flex-grow-1"
-  }, title), /*#__PURE__*/React.createElement("p", {
-    className: "text-justify flex-grow-1"
-  }, description), /*#__PURE__*/React.createElement("img", {
+    className: "order-1 text-center mb-3 d-flex align-items-center justify-content-center py-3 flex-grow-1 px-2"
+  }, title), /*#__PURE__*/React.createElement("img", {
     src: image,
-    className: "flex-grow-1"
+    className: "flex-grow-1 order-0"
   }), /*#__PURE__*/React.createElement("p", {
-    className: "text-center price"
+    className: "order-2 text-justify flex-grow-1 px-2"
+  }, description), /*#__PURE__*/React.createElement("p", {
+    className: "order-3 text-center price px-2"
   }, price), /*#__PURE__*/React.createElement(Button, {
-    className: "mx-auto mt-auto",
+    className: "order-4 mx-auto mt-auto px-2",
     onClick: handleClick
   }, "Buy me now!")));
 };
@@ -147,7 +148,7 @@ var Pricing = function Pricing() {
     });
   });
   return /*#__PURE__*/React.createElement(Row, {
-    className: "section py-3 justify-content-center",
+    className: "d-flex section py-3 justify-content-center",
     id: "pricing"
   }, /*#__PURE__*/React.createElement(Col, {
     xs: 12,

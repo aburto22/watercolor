@@ -8,29 +8,29 @@ const Button = ReactBootstrap.Button;
 const DATA = {
   pricing: [
     {
-      title: "One large paint",
+      title: "Large paint",
       description: "We get you a big 900mm x 600mm delievered to you ASAP!",
       price: "USD$150",
       id: "pricing-1",
       image:
-        "https://imgs.michaels.com/MAM/assets/1/3C806BFAE43F48829D51D9995CDC917A/img/51541773345442A99982BA9A939ECD3F/10122060_4.jpg?fit=inside|540:540",
+        "./public/medium.jpg",
     },
     {
-      title: "One medium size paint",
+      title: "Medium paint",
       description: "We get you a 600mm x 400mm delievered to you ASAP!",
       price: "USD$100",
       id: "pricing-2",
       image:
-        "https://cdn.shopify.com/s/files/1/1143/5428/products/4_1e04ee7c-e84e-4789-86fc-d9cdb6f4a32c_800x.jpg?v=1567983503",
+        "./public/large.jpg",
     },
     {
-      title: "One large & one medium size paint",
+      title: "Large & medium paint",
       description:
         "We get you a big 900mm x 600mm and a 600mm x 400mm delievered to you ASAP!",
       price: "USD$225",
       id: "pricing-3",
       image:
-        "https://media1.popsugar-assets.com/files/thumbor/B_3oBlFkQVPHy_9ynKAuT8FMJPk/fit-in/1024x1024/filters:format_auto-!!-:strip_icc-!!-/2020/07/15/928/n/1922441/68bc60045f0f7245968d19.27703092_/i/watercolor-painting-tips-beginners.jpg",
+        "./public/both.jpg",
     },
   ],
 };
@@ -45,7 +45,7 @@ const Navibar = () => {
           height="25"
           className="mr-1"
         />
-        Watercolor paintings
+        Watercolor
       </Navbar.Brand>
       <Navbar.Toggle />
       <Navbar.Collapse>
@@ -79,7 +79,8 @@ const Info = () => {
       </Col>
       <img
         className="mt-5"
-        src="https://watercolorpainting.com/staging/wp-content/uploads/2019/04/easy-watercolor-techniques-painting-japanese-flowers-within-5-minutes_FEATURED-IMAGE.png"
+        src="./public/home.png"
+        alt="Watercolor painting of a cherry tree"
       />
       <div className="section-divider" />
     </Row>
@@ -127,15 +128,15 @@ const PricingOption = ({ id, title, description, price, image }) => {
     );
   };
   return (
-    <Col sm={6} md={4} className="py-3 px-3 mt-4">
-      <div className="pricing-option p-4 mx-auto d-flex flex-column">
-        <h4 className="text-center mb-3 d-flex align-items-center justify-content-center py-3 flex-grow-1">
+    <Col md={6} lg={4} className="py-3 px-3 mt-4">
+      <div className="pricing-option mx-auto d-flex flex-column pb-4">
+        <h4 className="order-1 text-center mb-3 d-flex align-items-center justify-content-center py-3 flex-grow-1 px-2">
           {title}
         </h4>
-        <p className="text-justify flex-grow-1">{description}</p>
-        <img src={image} className="flex-grow-1" />
-        <p className="text-center price">{price}</p>
-        <Button className="mx-auto mt-auto" onClick={handleClick}>
+        <img src={image} className="flex-grow-1 order-0" />
+        <p className="order-2 text-justify flex-grow-1 px-2">{description}</p>
+        <p className="order-3 text-center price px-2">{price}</p>
+        <Button className="order-4 mx-auto mt-auto px-2" onClick={handleClick}>
           Buy me now!
         </Button>
       </div>
@@ -155,7 +156,7 @@ const Pricing = () => {
     />
   ));
   return (
-    <Row className="section py-3 justify-content-center" id="pricing">
+    <Row className="d-flex section py-3 justify-content-center" id="pricing">
       <Col xs={12} className="text-center">
         <h2 className="my-3">Current Offers</h2>
       </Col>
